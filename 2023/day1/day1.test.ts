@@ -5,100 +5,59 @@ import { combineFirstAndLastDigitLetters, combineFirstAndLastDigits, resolveFirs
 describe("Day 1", () => {
   describe("combineFirstAndLastDigits", () => {
     it("should combine the first and last digits", () => {
-      const line = "1abc2";
-  
-      const result = combineFirstAndLastDigits(line);
-  
-      expect(result).to.equal(12);
+      expect(combineFirstAndLastDigits("1abc2")).to.equal(12);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "pqr3stu8vwx";
-  
-      const result = combineFirstAndLastDigits(line);
-  
-      expect(result).to.equal(38);
+      expect(combineFirstAndLastDigits("pqr3stu8vwx")).to.equal(38);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "a1b2c3d4e5f";
-  
-      const result = combineFirstAndLastDigits(line);
-  
-      expect(result).to.equal(15);
+      expect(combineFirstAndLastDigits("a1b2c3d4e5f")).to.equal(15);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "treb7uchet";
-  
-      const result = combineFirstAndLastDigits(line);
-  
-      expect(result).to.equal(77);
+      expect(combineFirstAndLastDigits("treb7uchet")).to.equal(77);
     });
   });
 
   describe("combineFirstAndLastDigitLetters", () => {
     it("should combine the first and last digits", () => {
-      const line = "two1nine";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(29);
+      expect(combineFirstAndLastDigitLetters("two1nine")).to.equal(29);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "eightwothree";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(83);
+      expect(combineFirstAndLastDigitLetters("eightwothree")).to.equal(83);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "abcone2threexyz";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(13);
+      expect(combineFirstAndLastDigitLetters("abcone2threexyz")).to.equal(13);
     });
   
     it("should combine the first and last digits", () => {
-      const line = "xtwone3four";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(24);
+      expect(combineFirstAndLastDigitLetters("xtwone3four")).to.equal(24);
     });
 
     it("should combine the first and last digits", () => {
-      const line = "4nineeightseven2";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(42);
+      expect(combineFirstAndLastDigitLetters("4nineeightseven2")).to.equal(42);
     });
 
     it("should combine the first and last digits", () => {
-      const line = "zoneight234";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(14);
+      expect(combineFirstAndLastDigitLetters("zoneight234")).to.equal(14);
     });
 
     it("should combine the first and last digits", () => {
-      const line = "7pqrstsixteen";
-  
-      const result = combineFirstAndLastDigitLetters(line);
-  
-      expect(result).to.equal(76);
+      expect(combineFirstAndLastDigitLetters("7pqrstsixteen")).to.equal(76);
+    });
+
+    it("should combine the first and last digits", () => {
+      expect(combineFirstAndLastDigitLetters("oneight")).to.equal(18); // https://mtsknn.fi/blog/how-to-do-overlapping-matches-with-regular-expressions/
     });
   });
 
   describe("resolveFirstDemo", () => {
     it("should return the expected value for the demo", async () => {
-      const result = await resolveFirstDemo();
-            
+      const result = await resolveFirstDemo();  
       expect(result).to.equal(142);
     });
   });
@@ -106,7 +65,6 @@ describe("Day 1", () => {
   describe("resolveFirst", () => {
     it("should return the expected value for the first input file", async () => {
       const result = await resolveFirst();
-            
       expect(result).to.equal(55607);
     });
   });
@@ -121,7 +79,7 @@ describe("Day 1", () => {
   describe("resolveSecond", () => {
     it("should return the expected value for the first input file", async () => {
       const result = await resolveSecond();
-      expect(result).to.equal(0);
+      expect(result).to.equal(55291);
     });
   });
 });

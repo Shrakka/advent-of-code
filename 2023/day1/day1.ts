@@ -29,10 +29,12 @@ export function combineFirstAndLastDigitLetters(line: string) {
     8: "8",
     9: "9"
   };
-  const regex = new RegExp(Object.keys(digitMap).join("|"), "g");
+  const pattern = Object.keys(digitMap).join("|");
+  const lookAheadPattern = `(?=(${pattern}))`; // https://mtsknn.fi/blog/how-to-do-overlapping-matches-with-regular-expressions/
+  const regex = new RegExp(lookAheadPattern, "g");
   const matches = [...line.matchAll(regex)];
-  const firstDigit = digitMap[matches.at(0)![0]];
-  const lastDigit = digitMap[matches.at(-1)![0]];
+  const firstDigit = digitMap[matches.at(0)![1]];
+  const lastDigit = digitMap[matches.at(-1)![1]];
   return parseInt(`${firstDigit}${lastDigit}`);
 }
 
@@ -43,8 +45,6 @@ export async function resolve(filename: string, combine: (_: string) => number) 
     .map(combine)
     .reduce((sum, nb) => sum + nb);
 }
-
-
 
 export async function resolveFirstDemo() {
   return resolve("day1.input.demo1.txt", combineFirstAndLastDigits);
