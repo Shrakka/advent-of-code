@@ -1,0 +1,26 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of code",
+  "main": "index.js",
+  "keywords": [
+    "advent of code"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "ts-mocha ./2023/**/*.test.ts"
+  },
+  "author": "enzotesta@hotmail.fr",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "eslint": "^8.55.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}
