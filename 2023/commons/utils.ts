@@ -7,3 +7,7 @@ export async function parseLines(path: string, dirname: string) {
   const content = await readFile(absolutePath, { encoding: "utf8" });
   return content.split("\n").filter(line => line.length > 0);
 }
+
+export function sum(array: number[]) {
+  return array.reduce((acc, val) => acc + val);
+}
