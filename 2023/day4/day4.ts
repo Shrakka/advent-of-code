@@ -1,6 +1,6 @@
 import { parseLinesSync, sum } from "../commons/utils";
 
-export function resolve1(filename: string) {
+function resolve1(filename: string) {
   const lines = parseLinesSync(filename, __dirname);
   const games = lines.map(parseLine);
   return sum(games.map(computeGameScore));
@@ -12,7 +12,7 @@ export function resolve1(filename: string) {
   }
 }
 
-export function resolve2(filename: string) {
+function resolve2(filename: string) {
   const lines = parseLinesSync(filename, __dirname);
   const games = lines.map(parseLine);
   const gameScoreMap = Object.fromEntries(games.map((game, index) => ([index+1, computeGameScore(game)])));
