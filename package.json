@@ -7,7 +7,7 @@
   ],
   "type": "module",
   "scripts": {
-    "test": "ts-mocha ./2023/**/*.test.ts"
+    "test": "nodemon --watch . --exec ts-mocha ./2023/**/*.test.ts"
   },
   "author": "enzotesta@hotmail.fr",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "chai": "^4.3.10",
     "eslint": "^8.55.0",
     "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
     "ts-mocha": "^10.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"

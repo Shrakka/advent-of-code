@@ -2,7 +2,6 @@ import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-
 export async function parseLines(path: string, dirname: string) {
   const absolutePath = join(dirname, path);
   const content = await readFile(absolutePath, { encoding: "utf8" });
@@ -18,3 +17,8 @@ export function parseLinesSync(path: string, dirname: string) {
 export function sum(array: number[]) {
   return array.reduce((acc, val) => acc + val);
 }
+
+export function range(n: number, from = 0) {
+  return Array.from({ length: n }, (_, i) => i + from);
+}
+
