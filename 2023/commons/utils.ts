@@ -22,3 +22,6 @@ export function range(n: number, from = 0) {
   return Array.from({ length: n }, (_, i) => i + from);
 }
 
+export function zip<T, U>(array1: T[], array2: U[]) {
+  return array1.map((element, index) => ([element, array2[index]]));
+}
