@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { resolveDemo1, resolveDemo2, resolvePart1, resolvePart2 } from "./day5";
 
-describe.skip("Day 5", () => {
+describe("Day 5", () => {
   it("should solve the first demo", async () => {
     expect(resolveDemo1()).to.equal(35);
   });
@@ -10,8 +10,8 @@ describe.skip("Day 5", () => {
     expect(resolvePart1()).to.equal(26273516);
   });
 
-  it("should solve the second demo", async () => {
-    expect(resolveDemo2()).to.equal(0);
+  it.only("should solve the second demo", async () => {
+    expect(resolveDemo2()).to.equal(46);
   });
 
   it("should solve the second demo", async () => {
